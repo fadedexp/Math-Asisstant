@@ -1,0 +1,56 @@
+[
+    {
+        "username": "muhammadali",
+        "history": [
+            {
+                "role": "user",
+                "content": "salom"
+            },
+            {
+                "role": "user",
+                "content": "salom"
+            },
+            {
+                "role": "assistant",
+                "content": "Salom! Qanday yordam bera olishim mumkin?"
+            },
+            {
+                "role": "user",
+                "content": "привет"
+            },
+            {
+                "role": "assistant",
+                "content": "Men faqat o'zbek tilini tushunaman."
+            },
+            {
+                "role": "user",
+                "content": "mening ismim panigale"
+            },
+            {
+                "role": "assistant",
+                "content": "Salom, Panigale! Sizga qanday yordam bera olishim mumkin?"
+            }
+        ]
+    },
+    {
+        "username": "Muhammadali",
+        "history": [
+            {
+                "role": "human",
+                "content": "salom"
+            },
+            {
+                "role": "ai",
+                "content": "Salom! Qanday yordam bera olishim mumkin?"
+            },
+            {
+                "role": "human",
+                "content": "3 + 3"
+            },
+            {
+                "role": "ai",
+                "content": "3 + 3 = 6."
+            }
+        ]
+    }
+]
