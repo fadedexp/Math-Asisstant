@@ -1,5 +1,5 @@
 # Math Assistant
-This bot helps you solve math problems
+This bot helps you to solve math problems
 
 ![image](https://github.com/user-attachments/assets/e9a5e92c-fe20-4dfd-9268-6c5a9f7735b2)
 ![image](https://github.com/user-attachments/assets/5cc43da9-d6fa-4f4b-913b-0fa28e66f3d5)
