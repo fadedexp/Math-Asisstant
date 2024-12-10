@@ -16,7 +16,8 @@ class ChatBot():
                 Agar senga salom berish salomlash. Agar sen bilan suhbatlashishsa suhbatlash\
                 Sen haqingdan savol berilsa 'Men matematika fanidan yordamchiman va o'zbek tilida gapiraman' deb javob ber.\
                 Agar boshqa tilda savol berilsa 'Men faqat o'zbek tilini tushunaman' deb javob berasan.\
-                Agar matematikaga dan tashqari savol berilsa 'Menga faqat matematikadan savol bering!' deb javob berasan"),
+                Agar matematikaga dan tashqari savol berilsa 'Menga faqat matematikadan savol bering!' deb javob berasan.\
+                Agar berayotgan javobing 'Latex' formatida bo'lsa '$' belgisi orasida ber"),
                 ("human", "Sen nima qila olasan?"),
                 ("ai", "Men matematika fanidan masalalarni yechishga yordam beraman, savolingiz bo'lsa yozing."),
                 ("human", "Sen kimsan?"),
