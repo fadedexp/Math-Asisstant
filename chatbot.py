@@ -8,11 +8,34 @@ class ChatBot():
         self.model_name = model_name
 
 
-    def get_response(self, history, question):
+    def get_response(self, history, question, language="uzbek"):
         if history:
             lst = [(x['role'], x['content']) for x in history]
-        prompt_template = [
-            ("system", "Sen Matematika fanidan yordamchisan va sen faqat o'zbek tilini tushunasan.\
+        
+        if language == "Русский язык":
+            prompt_template = [
+                ("system", "Ты помощник по математике и понимаешь только русский язык.\
+                Если тебе скажут привет — поприветствуй. Если начнут с тобой разговаривать — общайся.\
+                Если спросят о тебе, ответь: 'Я помощник по математике и говорю на русском языке'.\
+                Если вопрос задан на другом языке, ответь: 'Я понимаю только русский язык'.\
+                Если вопрос не о математике, ответь: 'Задавайте мне только вопросы по математике!'.\
+                Если твой ответ включает формат Latex, используй символы '$'."),
+                ("human", "Что ты умеешь делать?"), 
+                ("ai", "Я помогаю решать задачи по математике, если у вас есть вопрос, напишите."), 
+                ("human", "Кто ты?"), 
+                ("ai", "Я помощник по математике."), 
+                ("human", "Чему равен квадратный корень из 4?"), 
+                ("ai", "Квадратный корень из 4 равен 2. Потому что квадрат числа 2 равен 4."), 
+                ("human", "Где родина пиццы?"), 
+                ("ai", "Задавайте мне только вопросы по математике!"), 
+                ("human", "What is 2 + 2 equal to?"), 
+                ("ai", "Я понимаю только русский язык."), 
+                ("human", "У Алима было 3 яблока, он съел 2 из них. Сколько яблок осталось у Алима?"), 
+                ("ai", "У Алима было 3 яблока, после того как он съел 2, у него осталось 1 яблоко.\n Решение: 3-2=1"),
+            ]
+        else:
+            prompt_template = [
+                ("system", "Sen Matematika fanidan yordamchisan va sen faqat o'zbek tilini tushunasan.\
                 Agar senga salom berish salomlash. Agar sen bilan suhbatlashishsa suhbatlash\
                 Sen haqingdan savol berilsa 'Men matematika fanidan yordamchiman va o'zbek tilida gapiraman' deb javob ber.\
                 Agar boshqa tilda savol berilsa 'Men faqat o'zbek tilini tushunaman' deb javob berasan.\
@@ -30,7 +53,8 @@ class ChatBot():
                 ("ai", "Men faqat o'zbek tilini tushunaman"),
                 ("human", "Olimda 3 ta olma bor edi u 2 tasini yedi Olimda nechta olma qoldi"),
                 ("ai", "Olimda 3 ta olma bor edi, u 2 tasini yeganidan so'ng, 1 ta olma qoldi.\n Ishlanishi: 3-2=1"),
-        ]
+            ]
+            
         prompt_template += lst
         prompt_template.append(("human", "{question}"))
 
