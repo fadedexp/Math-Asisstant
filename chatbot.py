@@ -55,7 +55,12 @@ class ChatBot():
             ]
             
         # prompt_template += lst
+<<<<<<< HEAD
         prompt_template.append(("human", '{question}'))
+=======
+        prompt_template.append(("human", "{question}"))
+
+>>>>>>> 39cafa06356c36c6a24e9af7ba1b2ab36f4549a1
         prompt_template = ChatPromptTemplate.from_messages(prompt_template)
 
         llm = ChatOpenAI(model=self.model_name, api_key=self.api_key)
