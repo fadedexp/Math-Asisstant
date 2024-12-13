@@ -11,7 +11,6 @@ class ChatBot():
     def get_response(self, history, question, language="uzbek"):
         if history:
             lst = [(x['role'], x['content']) for x in history]
-        
         if language == "Русский язык":
             prompt_template = [
                 ("system", "Ты помощник по математике и понимаешь только русский язык.\
@@ -55,9 +54,8 @@ class ChatBot():
                 ("ai", "Olimda 3 ta olma bor edi, u 2 tasini yeganidan so'ng, 1 ta olma qoldi.\n Ishlanishi: 3-2=1"),
             ]
             
-        prompt_template += lst
-        prompt_template.append(("human", "{question}"))
-
+        # prompt_template += lst
+        prompt_template.append(("human", '{question}'))
         prompt_template = ChatPromptTemplate.from_messages(prompt_template)
 
         llm = ChatOpenAI(model=self.model_name, api_key=self.api_key)
