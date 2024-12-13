@@ -55,7 +55,7 @@ class ChatBot():
                 ("ai", "Olimda 3 ta olma bor edi, u 2 tasini yeganidan so'ng, 1 ta olma qoldi.\n Ishlanishi: 3-2=1"),
             ]
             
-        prompt_template += lst
+        # prompt_template += lst
         prompt_template.append(("human", "{question}"))
 
         prompt_template = ChatPromptTemplate.from_messages(prompt_template)
