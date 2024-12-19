@@ -25,7 +25,7 @@ This bot helps you to solve math problems
 ## Usage
 To run the project, use the following command:
 ```bash
-streamlit run app.py
+streamlit run main.py
 ```
 You need Openai API_KEY to use the bot
 
